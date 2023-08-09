@@ -11,7 +11,12 @@ const reservationRoutes = app => {
 	router.get('/:id', validatorIdReservation, reservaCon.getReservation);
 
 	router.post('/new', validateReservation, reservaCon.createReservation);
-	router.put('/:id', validatorIdReservation, reservaCon.updateReservation);
+	router.put(
+		'/:id',
+		validateReservation,
+		validatorIdReservation,
+		reservaCon.updateReservation,
+	);
 	router.delete('/:id', validatorIdReservation, reservaCon.deleteReservation);
 };
 module.exports = reservationRoutes;

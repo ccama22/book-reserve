@@ -11,7 +11,7 @@ const bookRoutes = app => {
 	router.get('/:id', validatorId, bookCon.getBook);
 
 	router.post('/new', validatorBook, bookCon.createBook);
-	router.put('/:id', validatorId, bookCon.updateBook);
+	router.put('/:id', validatorBook, validatorId, bookCon.updateBook);
 	router.delete('/:id', validatorId, bookCon.deleteBook);
 };
 

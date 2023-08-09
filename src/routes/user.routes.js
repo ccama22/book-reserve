@@ -12,7 +12,7 @@ const userRoutes = app => {
 	router.get('/:id', validatorIdUser, userCon.getUser);
 
 	router.post('/new', validatorUser, userCon.createUser);
-	router.put('/:id', validatorIdUser, userCon.updateUser);
+	router.put('/:id', validatorUser, validatorIdUser, userCon.updateUser);
 	router.delete('/:id', validatorIdUser, userCon.deleteUser);
 };
 module.exports = userRoutes;

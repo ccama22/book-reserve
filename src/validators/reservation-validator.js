@@ -3,6 +3,7 @@ const { validateDate } = require('../helpers');
 const { validateErrors } = require('../middlewares/general.validator');
 const { repeatUserbyId } = require('../helpers/repeatUserbyId.helpers');
 const { repeatBookId } = require('../helpers/repeatBookId.helpers');
+const { validateDateDue } = require('../helpers/validateDateDue');
 
 const validateReservation = [
 	check('user_id', 'El id del usuario es requerido').notEmpty(),
@@ -14,7 +15,7 @@ const validateReservation = [
 	check('dateReserved', 'La fecha de reservación es requerida').notEmpty(),
 	check('dateReserved').custom(validateDate),
 	check('dateDue', 'La fecha de vencimiento es requerida').notEmpty(),
-	check('dateDue').custom(validateDate),
+	check('dateDue').custom(validateDate).custom(validateDateDue),
 	validateErrors,
 ];
 module.exports = validateReservation;
