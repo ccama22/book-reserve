@@ -12,7 +12,7 @@ const listReservation = async (req, res) => {
 		}
 		res.status(200).json({
 			msg: 'lista de reservacion',
-			books: listReservation,
+			Reservacion: listReservation,
 		});
 	} catch (error) {
 		console.log(error);
@@ -24,8 +24,8 @@ const createReservation = async (req, res) => {
 		const newReservationSaved = await newReservation.save();
 
 		res.status(201).json({
-			msg: 'Usuario creado correctamente',
-			book: newReservationSaved,
+			msg: 'Reservacion creado correctamente',
+			reservation: newReservationSaved,
 		});
 	} catch (error) {
 		console.lof(error);
@@ -44,7 +44,7 @@ const updateReservation = async (req, res) => {
 		);
 		res.status(200).json({
 			msg: 'reservacion actualizado correctamente',
-			book: updateReservation,
+			reservation: updateReservation,
 		});
 	} catch (error) {
 		console.log(error);
@@ -54,9 +54,11 @@ const updateReservation = async (req, res) => {
 const deleteReservation = async (req, res) => {
 	const { id } = req.params;
 	try {
-		await Reservation.findByIdAndDelete(id);
+		const reservation = await Reservation.findByIdAndDelete(id);
 		res.status(200).json({
+			method: 'Delete',
 			msg: 'reservacion eliminado correctamente',
+			reservation,
 		});
 	} catch (error) {
 		console.log(error);
@@ -68,7 +70,7 @@ const getReservation = async (req, res) => {
 	try {
 		const reservation = await Reservation.findById(id);
 		res.status(200).json({
-			msg: 'reservacion encontrado',
+			msg: 'Reservacion encontrado',
 			reservation,
 		});
 	} catch (error) {

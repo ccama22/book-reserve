@@ -12,7 +12,7 @@ const listUser = async (req, res) => {
 		}
 		res.status(200).json({
 			msg: 'lista de usuarios',
-			books: listUsers,
+			users: listUsers,
 		});
 	} catch (error) {
 		console.log(error);
@@ -26,7 +26,7 @@ const createUser = async (req, res) => {
 
 		res.status(201).json({
 			msg: 'Usuario creado correctamente',
-			book: newUserSaved,
+			users: newUserSaved,
 		});
 	} catch (error) {
 		console.lof(error);
@@ -41,7 +41,7 @@ const updateUser = async (req, res) => {
 		});
 		res.status(200).json({
 			msg: 'usuario actualizado correctamente',
-			book: updateUser,
+			users: updateUser,
 		});
 	} catch (error) {
 		console.log(error);
