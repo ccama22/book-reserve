@@ -2,6 +2,8 @@
 
 Bienvenido a la documentación  de la API de nuestro sistema CRUD (Crear, Leer, Actualizar, Eliminar) para la gestión de reservas de libros.
 
+![library](https://github.com/ccama22/ccama22/assets/66760303/72551976-0f38-4115-a8b1-318b3ec6f184)
+
 ## Link de collecion de rutas en postman
 
 Collection Postmant: [https://api.postman.com/collections/18994913-61b6691d-f5ab-4399-87f2-86bfdd882deb?access_key=PMAT-01H7E6TYEP7N44DGKZT1XQG8DK](https://api.postman.com/collections/18994913-ee731972-29cf-4618-ab85-5190d67fcd8b?access_key=PMAT-01H7E7817BVHP1JFCZYSXM4TDT)
