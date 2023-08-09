@@ -2,7 +2,8 @@
 
 Bienvenido a la documentación  de la API de nuestro sistema CRUD (Crear, Leer, Actualizar, Eliminar) para la gestión de reservas de libros.
 
-![library](https://github.com/ccama22/ccama22/assets/66760303/72551976-0f38-4115-a8b1-318b3ec6f184)
+![library2](https://github.com/ccama22/ccama22/assets/66760303/6981cf4a-bb7c-46cc-909c-15c778867b97)
+
 
 ## Link de collecion de rutas en postman
 
