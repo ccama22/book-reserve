@@ -1,5 +1,5 @@
 const { check } = require('express-validator');
-const { exitsReservationbyId, validateDate } = require('../helpers');
+const { validateDate } = require('../helpers');
 const { validateErrors } = require('../middlewares/general.validator');
 const { repeatUserbyId } = require('../helpers/repeatUserbyId.helpers');
 const { repeatBookId } = require('../helpers/repeatBookId.helpers');
