@@ -1,6 +1,6 @@
 const { Router } = require('express');
 const reservaCon = require('../controllers/reservation.controllers');
-const { validatorId } = require('../validators');
+const { validatorId, validateReservation } = require('../validators');
 
 const router = Router();
 const reservationRoutes = app => {
@@ -9,7 +9,7 @@ const reservationRoutes = app => {
 	router.get('/list', reservaCon.listReservation);
 	router.get('/:id', validatorId, reservaCon.getReservation);
 
-	router.post('/new', reservaCon.createReservation);
+	router.post('/new', validateReservation, reservaCon.createReservation);
 	router.put('/:id', validatorId, reservaCon.updateReservation);
 	router.delete('/:id', validatorId, reservaCon.deleteReservation);
 };
