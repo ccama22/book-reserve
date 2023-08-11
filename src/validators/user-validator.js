@@ -7,6 +7,7 @@ const validateUser = [
 	check('email', 'El correo es requerido').isEmail(),
 	body('email').isEmail().withMessage('Debe ser un correo electrónico válido'),
 	check('email').custom(exitsEmailUser),
+
 	validateErrors,
 ];
 module.exports = validateUser;
