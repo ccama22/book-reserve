@@ -1,6 +1,6 @@
 const { check } = require('express-validator');
-const { exitsBookbyId } = require('../helpers');
 const { validateErrors } = require('../middlewares/general.validator');
+const { exitsBookbyId } = require('../helpers/book.helpers');
 
 const validatorID = [
 	check('id', 'El id debe ser un MongoID').isMongoId(),
